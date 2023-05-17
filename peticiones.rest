@@ -1,0 +1,119 @@
+@host = http://localhost:3000
+
+GET {{host}}/users/all
+
+###
+
+POST {{host}}/users/new
+
+###
+
+DELETE {{host}}/api/clients/160
+
+###
+
+PUT {{host}}/clients/edit
+
+###
+
+GET {{host}}/api/clients
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo3MCwidXNlcl9yb2xlIjoicmVndWxhciIsImV4cF9hdCI6MTY4MzU1MTYzNCwiaWF0IjoxNjgzNTUxMzM0fQ.8VfHR15Kh9YO00KT24y9JEd0Z2e4gZAb_rNHDsDR5-o
+
+
+###
+
+PUT {{host}}/api/clients/166
+Content-Type: application/json
+
+{
+    "nombre": "Benjamin",
+    "apellidos": "Luzon",
+    "direccion": "Calle rio aranda, torremolinos, Malaga",
+    "email": "benja6@luzon.com",
+    "edad": 29,
+    "genero": "M",
+    "cuota": 13.9,
+    "fecha_nacimiento": "2000-08-13",
+    "dni": "77024980Z"   
+}
+
+###
+
+POST {{host}}/api/clients
+Content-Type: application/json
+
+{
+    "nombre": "Benjamin2",
+    "apellidos": "Luzon",
+    "direccion": "torremolinos, Malaga",
+    "email": "bend5d9@luzon.com",
+    "edad": 29,
+    "genero": "M",
+    "cuota": 13.9,
+    "fecha_nacimiento": "2000-08-13",
+    "dni": "77024980Z"
+}
+
+###
+
+GET {{host}}/api/clients/mayores
+
+###
+
+GET {{host}}/api/clients/45
+
+##### API TEACHER
+
+GET {{host}}/api/clients
+Authorization: ldld
+
+
+###
+
+POST {{host}}/api/teachers
+Content-Type: application/json
+
+{
+    "nombre": "Benjamin",
+    "experiencia": 23
+}
+
+###
+
+PUT {{host}}/api/teachers/108
+Content-Type: application/json
+
+{
+    "nombre": "Benja",
+    "experiencia": 34
+}
+
+###
+
+DELETE {{host}}/api/teachers/109
+
+###
+
+GET {{host}}/api/teachers/clientes
+
+
+### API USUARIOS
+
+POST {{host}}/api/users/register
+Content-Type: application/json
+
+{
+    "username": "Benjamin1",
+    "email": "benjaminLuzon1@gmail.com",
+    "password": "12345"
+}
+
+###
+
+POST {{host}}/api/users/login
+Content-Type: application/json
+
+{
+    "email": "benjaminLuzon@gmail.com",
+    "password": "12345"
+}

@@ -1,0 +1,41 @@
+@host = http://localhost:3000
+
+GET {{host}}/api/autores/2
+
+### 
+
+POST {{host}}/api/autores
+Content-Type: application/json
+
+{
+    "nombre": "Benjamin",
+    "email": "benjaluzon01@gmail.com",
+    "imagen": "benjamin.png"
+}
+
+
+###
+
+POST {{host}}/api/posts
+Content-Type: application/json
+
+{
+    "titulo": "Post 7",
+    "descripcion": "Descripccion del Post 7",
+    "fecha": "2023-06-09",
+    "categoria": "rea",
+    "autores_id": "2"
+}
+
+###
+
+GET {{host}}/api/posts/
+
+
+###
+
+GET {{host}}/api/posts/2
+
+###
+
+DELETE {{host}}/api/posts/8
